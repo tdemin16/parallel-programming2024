@@ -1,0 +1,3 @@
+# CUDA Lab Matrix Multiplication
+Like in the vector addition case, in the simplest matrix multiplication code we experimented with, the number of accesses to the global memory was excessive, resulting in low performance.
+By using two sliding windows of the same size of a block, threads of the same block can load in the shared memory a portion of the matrix, thus, computing partial dot products. By summing all partial dot products we can compute the final matrix multiplication.

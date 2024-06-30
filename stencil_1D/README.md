@@ -1,0 +1,3 @@
+# CUDA Lab Stencil
+In the simple version we implemented, each thread read the required information to compute the stencil, which resulted in a multiple memory accesses for the same values.
+In the modified version, each thread loaded one element into shared memory (much faster than global memory) thus strongly reducing the access time. This required a `__syncthreads()` call to synchronize threads of the same block.
